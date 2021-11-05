@@ -4,12 +4,11 @@ on:
   schedule:
     - cron: '*/30 * * * *'
   
-  jobs:
-    print_info:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo ${{ github.repository }}
-        - run: echo ${{ runner.os }}
-        - run: echo ${{ github.event_name }}
-        - run: echo ${{ github.workflow }}
-
+jobs:
+  print_info:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.repository }}
+      - run: echo ${{ runner.os }}
+      - run: echo ${{ github.event_name }}
+      - run: echo ${{ github.workflow }}
